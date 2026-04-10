@@ -10,13 +10,13 @@ $results = foreach ($entry in $devices) {
     if ([string]::IsNullOrWhiteSpace($DeviceName)) { continue }
 
     # Gets device details and adds it to a variable called "intuneDevices"
-    $intuneDevices = Get-MgDeviceManagementManagedDevice -Filter "devicename eq '$DeviceName' and operatingSystem eq 'Android'"
+    $intuneDevices = Get-MgDeviceManagementManagedDevice -Filter "deviceName eq '$DeviceName' and operatingSystem eq 'Android'"
 
     # Goes through intuneDevices
     foreach ($d in $intuneDevices) {
         
         # Syncs device in Intune using DeviceName.
-        Invoke-MgDeviceManagementManagedDeviceSyncDevice -ManagedDeviceId $d.Id -ErrorAction SilentlyContinue #-
+        Sync-MgDeviceManagementManagedDevice -ManagedDeviceId $d.Id -ErrorAction SilentlyContinue #-
 
         # Adds device details to object which gets inputted into results variable
         [PSCustomObject]@{
@@ -32,4 +32,4 @@ $results = foreach ($entry in $devices) {
 }
 
 # Exports results into csv
-$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\IntuneSyncResults.csv" -NoTypeInformation -Force
+$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\IntuneSyncResults.csv" -NoTypeInformation
