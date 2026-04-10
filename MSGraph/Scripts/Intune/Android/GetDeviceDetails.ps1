@@ -1,5 +1,5 @@
 #Import devices from a CSV. The CSV should have "SerialNumber" as the header
-$import = Import-Csv "C:\MSGraph\CSV\Intune\Import\AndroidSerialNumber.csv"
+$import = Import-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Import\AndroidSerialNumber.csv"
 
 #Goes through list and adds them to a variable called "Serial"
 $results = foreach ($entry in $import) {
@@ -29,4 +29,4 @@ $results = foreach ($entry in $import) {
 }
 
 #Exports results into csv
-$results | Export-Csv "C:\MSGraph\CSV\Intune\Export\IntuneDetections.csv" -NoTypeInformation
+$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\IntuneDetections.csv" -NoTypeInformation

@@ -1,5 +1,5 @@
 # Import devices from a CSV. The CSV should have "IMEI" as the header
-$devices = Import-Csv "C:\MSGraph\CSV\Intune\Import\AndroidIMEI.csv"
+$devices = Import-Csv "$env:USERPROFIL\MSGraph\CSV\Intune\Import\AndroidIMEI.csv"
 
 # Goes through list and adds them to a variable called "IMEI"
 $results = foreach ($entry in $devices) {
@@ -32,4 +32,4 @@ $results = foreach ($entry in $devices) {
 }
 
 # Exports results into csv
-$results | Export-Csv "C:\MSGraph\CSV\Intune\Export\IntuneIMEIDeletions.csv" -NoTypeInformation
+$results | Export-Csv "$env:USERPROFIL\MSGraph\CSV\Intune\Export\IntuneIMEIDeletions.csv" -NoTypeInformation
