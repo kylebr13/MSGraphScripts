@@ -29,4 +29,4 @@ $results = foreach ($entry in $import) {
 }
 
 #Exports results into csv
-$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\IntuneDetections.csv" -NoTypeInformation
+$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\IntuneDetections.csv" -NoTypeInformation -Force
