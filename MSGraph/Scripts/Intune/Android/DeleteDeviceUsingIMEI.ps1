@@ -32,4 +32,4 @@ $results = foreach ($entry in $devices) {
 }
 
 # Exports results into csv
-$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\IntuneIMEIDeletions.csv" -NoTypeInformation -Force
+$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\IntuneIMEIDeletions.csv" -NoTypeInformation
