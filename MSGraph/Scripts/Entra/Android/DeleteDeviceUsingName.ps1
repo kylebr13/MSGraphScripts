@@ -4,14 +4,14 @@ $csv = Import-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Import\AndroidDeviceId.cs
 # Adds list to variable called $csv
 $results = foreach ($entry in $csv) {
 
-    # Trims header and adds data to deviceId
-    $deviceId = $entry.deviceId.Trim()
+    # Trims header and adds data to deviceName
+    $deviceName = $entry.deviceName.Trim()
 
     # Removes blank sapce
-    if ([string]::IsNullOrWhiteSpace($deviceId)) { continue }
+    if ([string]::IsNullOrWhiteSpace($deviceName)) { continue }
 
     # Gets device details and adds it to a variable called "entraDevices"
-    $entraDevices = Get-MgDevice -Filter "deviceId eq '$deviceId'"
+    $entraDevices = Get-MgDevice -Filter "displayName eq '$deviceName'"
 
     #Goes through Entra Devices
     foreach ($d in $entraDevices) {
@@ -22,7 +22,7 @@ $results = foreach ($entry in $csv) {
         # Adds device details to object which gets inputted into results variable
         [PSCustomObject]@{
             DeviceName       = $d.DisplayName
-            EntraObjectId    = $d.Id
+            InputName        = $deviceName
             DeviceId         = $d.DeviceId
             OperatingSystem  = $d.OperatingSystem
             DeletedFromEntra = "Yes"
