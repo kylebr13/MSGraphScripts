@@ -1,13 +1,15 @@
-Once you download the Zip file, please place the "MSGraph" folder into C:\User\*USERPROFILE*\ directory. This will be the directory you will work from.
+Download the ZIP file by clicking on "Code" and "Download ZIP".
+
+Please place the "MSGraph" folder into C:\User\*USERPROFILE*\ directory. This will be the directory you will work from. It may be best to pin this file path in your explorer.
 
 If you are updating this folder with the latest version, please delete the MSGraph folder first before re-placing it.
 
 Before running any scripts, please run the below command in PowerShell. This will only need to be run once
 
-Get-ChildItem "$env:USERPROFILE\MSGraph\Scripts" -Recurse | Unblock-File 
+``` Get-ChildItem "$env:USERPROFILE\MSGraph\Scripts" -Recurse | Unblock-File ```
 
-To run any of the commands, use when in PowerShell you will want to do for example - 
+The scripts will be blocked if you download them from here. To use any of the scripts, use the following example command in PowerShell.
 
-& "C:\Users\*USERPROFILE*\MSGraph\Scripts\Intune\Android\DeleteDeviceUsingIMEI.ps1"
+``` & "C:\Users\*USERPROFILE*\MSGraph\Scripts\Intune\Android\DeleteDeviceUsingIMEI.ps1" ```
 
 This will allow the scripts to run.
