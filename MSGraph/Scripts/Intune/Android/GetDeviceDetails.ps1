@@ -28,5 +28,5 @@ $results = foreach ($entry in $import) {
     }
 }
 
-#Exports results into csv
-$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\IntuneDetections.csv" -NoTypeInformation
+# Exports results into csv
+$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\Export.csv" -NoTypeInformation

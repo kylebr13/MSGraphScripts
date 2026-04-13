@@ -1,5 +1,5 @@
 # Import devices
-$csv = Import-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Import\AndroidDeviceName.csv"
+$csv = Import-Csv "$env:USERPROFILE\MSGraph\CSV\Entra\Import\AndroidDeviceName.csv"
 
 # Adds list to variable called $csv
 $results = foreach ($entry in $csv) {
@@ -32,4 +32,4 @@ $results = foreach ($entry in $csv) {
 }
 
 # Exports results into csv
-$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\EntraNameDeletions.csv" -NoTypeInformation
+$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\Export.csv" -NoTypeInformation
