@@ -32,4 +32,4 @@ $results = foreach ($entry in $csv) {
 }
 
 # Exports results into csv
-$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\Export.csv" -NoTypeInformation
+$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Entra\Export\Export.csv" -NoTypeInformation
