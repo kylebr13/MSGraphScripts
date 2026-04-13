@@ -1,5 +1,5 @@
 # Import devices
-$csv = Import-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Import\AndroidDeviceId.csv"
+$csv = Import-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Import\AndroidDeviceName.csv"
 
 # Adds list to variable called $csv
 $results = foreach ($entry in $csv) {
@@ -17,7 +17,7 @@ $results = foreach ($entry in $csv) {
     foreach ($d in $entraDevices) {
 
         #Deletes device from Entra
-        Remove-MgDevice -DeviceId $d.Id -WhatIf
+        Remove-MgDevice -DeviceId $d.Id #-WhatIf
 
         # Adds device details to object which gets inputted into results variable
         [PSCustomObject]@{
@@ -32,4 +32,4 @@ $results = foreach ($entry in $csv) {
 }
 
 # Exports results into csv
-$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\EntraIDDeletions.csv" -NoTypeInformation
+$results | Export-Csv "$env:USERPROFILE\MSGraph\CSV\Intune\Export\EntraNameDeletions.csv" -NoTypeInformation
