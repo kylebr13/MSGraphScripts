@@ -1,6 +1,6 @@
 Download the ZIP file by clicking on "Code" and "Download ZIP".
 
-Please place the "MSGraph" folder into C:\User\*USERPROFILE*\ directory. This will be the directory you will work from. It may be best to pin this file path in your explorer.
+Please place the "MSGraph" folder into "C:\User\*USERPROFILE*\" directory. This will be the directory you will work from. It may be best to pin this file path in your explorer.
 
 If you are updating this folder with the latest version, please delete the MSGraph folder first before re-placing it.
 
