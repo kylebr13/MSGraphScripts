@@ -4,11 +4,11 @@ Please place the "MSGraph" folder into C:\User\*USERPROFILE*\ directory. This wi
 
 If you are updating this folder with the latest version, please delete the MSGraph folder first before re-placing it.
 
-Before running any scripts, please run the below command in PowerShell. This will only need to be run once, unless you download the files again.
+The scripts will be blocked if you download them from here. Before running any scripts, please run the below command in PowerShell. This will only need to be run once, unless you download the files again.
 
 ``` Get-ChildItem "$env:USERPROFILE\MSGraph\Scripts" -Recurse | Unblock-File ```
 
-The scripts will be blocked if you download them from here. To use any of the scripts, use the following example command in PowerShell.
+To use any of the scripts, use the following example command in PowerShell.
 
 ``` & "C:\Users\*USERPROFILE*\MSGraph\Scripts\Intune\Android\DeleteDeviceUsingIMEI.ps1" ```
 
