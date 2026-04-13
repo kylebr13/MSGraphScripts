@@ -12,4 +12,4 @@ To use any of the scripts, use the following example command in PowerShell.
 
 ``` & "C:\Users\*USERPROFILE*\MSGraph\Scripts\Intune\Android\DeleteDeviceUsingIMEI.ps1" ```
 
-This will allow the scripts to run.
+This will run the specific script you want.
