@@ -4,7 +4,7 @@ Please place the "MSGraph" folder into C:\User\*USERPROFILE*\ directory. This wi
 
 If you are updating this folder with the latest version, please delete the MSGraph folder first before re-placing it.
 
-Before running any scripts, please run the below command in PowerShell. This will only need to be run once
+Before running any scripts, please run the below command in PowerShell. This will only need to be run once, unless you download the files again.
 
 ``` Get-ChildItem "$env:USERPROFILE\MSGraph\Scripts" -Recurse | Unblock-File ```
 
